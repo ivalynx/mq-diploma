@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'OpenSans';
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  src: url(https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.woff);
   src: local('OpenSans'), local('OpenSans'),
-  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff2') format('woff2'),
-  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.ttf') format('truetype');
+  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  src: url(https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.woff);
   src: local('OpenSans'), local('OpenSans'),
-  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff2') format('woff2'),
-  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.ttf') format('truetype');
+  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
 }
