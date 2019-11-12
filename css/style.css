@@ -1,12 +1,68 @@
 @font-face {
-  font-family: OpenSans;
+  font-family: 'OpenSans';
   src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  src: local('OpenSans'), local('OpenSans'),
+  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
 }
+
 @font-face {
   font-family: OpenSans;
   src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  src: local('OpenSans'), local('OpenSans'),
+  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans, Verdana, Geneva, Arial, Tahoma, Helvetica, sans-serif;
+  font-size: 62.5%; /* 10px*/
+  color: #000000;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+a:focus, a:active, a:hover, a:visited {
+  color: inherit;
+}
+
+.header {
+  position: relative;
+  padding-top: 3.2rem;
+  padding-right: 2.1rem;
+  padding-bottom: 7rem;
+  padding-left: 2.1rem;
+  color: #ffffff;
+  background-color: #1c1f40;
+  background-image: url(../img/football_767.jpg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.header::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #191c3b;
+  opacity: 0.6;
+  content: "";
+  z-index: 1;
 }
