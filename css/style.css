@@ -103,7 +103,7 @@ a:focus, a:active, a:hover, a:visited {
   margin-left: 4.4rem;
 }
 
-.button {
+.button, .button:hover, .button:active; .button:focus {
   display: block;
   margin-bottom: 1rem;
   font-size: 0.8rem;
