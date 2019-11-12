@@ -63,7 +63,7 @@ a:focus, a:active, a:hover, a:visited {
   z-index: 1;
 }
 
-.content {
+.container {
   padding-top: 3.2rem;
   padding-right: 2.1rem;
   padding-bottom: 7rem;
@@ -71,7 +71,7 @@ a:focus, a:active, a:hover, a:visited {
 }
 
 
-.header.content {
+.header.container {
   position: relative;
   z-index: 2;
 }
