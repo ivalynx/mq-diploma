@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'OpenSans';
-  src: url(https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.woff);
+  src: url(../fonts/OpenSans-Regular.woff);
   src: local('OpenSans'), local('OpenSans'),
-  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.woff2') format('woff2'),
-  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Regular.ttf') format('truetype');
+  url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.woff);
+  src: url(../fonts/OpenSans-Bold.woff);
   src: local('OpenSans'), local('OpenSans'),
-  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.woff2') format('woff2'),
-  url('https://netology-code.github.io/html-2-diploma/fonts/OpenSans-Bold.ttf') format('truetype');
+  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
 }
@@ -44,10 +44,6 @@ a:focus, a:active, a:hover, a:visited {
 
 .header {
   position: relative;
-  padding-top: 3.2rem;
-  padding-right: 2.1rem;
-  padding-bottom: 7rem;
-  padding-left: 2.1rem;
   color: #ffffff;
   background-color: #1c1f40;
   background-image: url(../img/football_767.jpg);
@@ -65,6 +61,19 @@ a:focus, a:active, a:hover, a:visited {
   opacity: 0.95;
   content: "";
   z-index: 1;
+}
+
+.content {
+  padding-top: 3.2rem;
+  padding-right: 2.1rem;
+  padding-bottom: 7rem;
+  padding-left: 2.1rem;
+}
+
+
+.header.content {
+  position: relative;
+  z-index: 2;
 }
 
 .logotype {
@@ -88,18 +97,30 @@ a:focus, a:active, a:hover, a:visited {
   line-height: 3.1rem;
 }
 
+.header_subtitle {
+  display: block;
+  margin-top: 2.5rem;
+  margin-left: 4.4rem;
+}
+
 .button {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
   color: #ffffff;
+  text-transform: uppercase;
   background-color: #5e42b0;
   fill: #ffffff;
 }
 
 .button.download {
-  padding-top: 9px;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
   padding-left: 11.2rem;
   background-position: 8.2rem 50%;
   background-repeat: no-repeat;
   background-size: auto 2.4rem;
+  border-radius: 5rem;
 }
 
 .button.apple {
@@ -108,4 +129,8 @@ a:focus, a:active, a:hover, a:visited {
 
 .button.google {
   background-image: url(../img/google-play.svg);
+}
+
+.button .name {
+  display: block;
 }
