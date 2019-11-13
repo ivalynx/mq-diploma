@@ -332,6 +332,13 @@ a:focus, a:active, a:hover, a:visited {
   height: auto;
 }
 
+@media (min-width: 641px) {  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 @media (min-width: 641px) and (max-width: 960px) { 
   .header {
     background-image: url(../img/football_1280.jpg);
@@ -369,10 +376,8 @@ a:focus, a:active, a:hover, a:visited {
   }
 
   .buttons {
-    display: flex;
     padding-right: 23px;
     padding-left: 27px;
-    justify-content: space-around;
   }
 
   .button, .button:hover, .button:active, .button:focus {
