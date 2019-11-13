@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: OpenSans, Verdana, Geneva, Arial, Tahoma, Helvetica, sans-serif;
-  font-size: 62.5%; /* 10px*/
+  font-size: 93.75%; /* 15px; 10px = 62.5%*/
   color: #000000;
   background-color: #ffffff;
 }
@@ -42,16 +42,21 @@ a:focus, a:active, a:hover, a:visited {
   color: inherit;
 }
 
-.header {
+.header, .footer {
   position: relative;
   color: #ffffff;
   background-color: #1c1f40;
   background-image: url(../img/football_767.jpg);
   background-position: 50% 0;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.header::after {
+.header {
+  background-image: url(../img/football_767.jpg);
+}
+
+.header::after, .footer::after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -63,23 +68,30 @@ a:focus, a:active, a:hover, a:visited {
   z-index: 1;
 }
 
-.container {
-  padding-top: 3.2rem;
-  padding-right: 2.1rem;
-  padding-bottom: 7rem;
-  padding-left: 2.1rem;
-}
-
-
-.header.container {
+.header > .container,
+.footer > .container {
   position: relative;
   z-index: 2;
 }
 
+.header > .container {
+  padding-top: 32px;
+  padding-bottom: 70px;
+}
+
+.header > .container, 
+.section_title, 
+.article,
+.add_information .inner,
+.footer > .container {  
+  padding-right: 21px;
+  padding-left: 21px;
+}
+
 .logotype {
   display: block;
-  width: 13.3rem;
-  height: 3.6rem;
+  width: 133px;
+  height: 36px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -91,22 +103,22 @@ a:focus, a:active, a:hover, a:visited {
 }
 
 .header_title {
-  margin-top: 13rem;
-  margin-bottom: 8rem;
-  font-size: 2.8rem;
-  line-height: 3.1rem;
+  margin-top: 130px;
+  margin-bottom: 80px;
+  font-size: 28px;
+  line-height: 31px;
 }
 
 .header_subtitle {
   display: block;
-  margin-top: 2.5rem;
-  margin-left: 4.4rem;
+  margin-top: 22px;
+  margin-left: 44px;
 }
 
-.button, .button:hover, .button:active; .button:focus {
+.button, .button:hover, .button:active, .button:focus {
   display: block;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
+  margin-bottom: 10px;
+  font-size: 8px;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #5e42b0;
@@ -114,13 +126,13 @@ a:focus, a:active, a:hover, a:visited {
 }
 
 .button.download {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
-  padding-left: 11.2rem;
-  background-position: 8.2rem 50%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 112px;
+  background-position: 82px 50%;
   background-repeat: no-repeat;
-  background-size: auto 2.4rem;
-  border-radius: 5rem;
+  background-size: auto 24px;
+  border-radius: 15px;
 }
 
 .button.apple {
@@ -133,4 +145,186 @@ a:focus, a:active, a:hover, a:visited {
 
 .button .name {
   display: block;
+}
+
+.main > .container {
+  padding-top: 26px;
+}
+
+.section {
+  background-position: 50% 81px;
+  background-repeat: no-repeat;
+}
+
+.athlets {
+  background-image: url(../img/footballer_192.png);
+}
+
+.players {
+  background-image: url(../img/basketballer_302.png);
+}
+
+.section_title {
+  margin-bottom: 268px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #e7e7e7;
+  text-transform: uppercase;
+}
+
+.article {
+  padding-top: 60px;
+  padding-bottom: 55px;
+}
+
+.article:nth-child(odd) {
+  background-color: #f5f4f9;
+}
+
+.article:last-child {
+  background-color: #5e42b0;
+}
+
+.players .article:last-child {
+  background-color: #090c35;
+}
+
+.article .title {
+  position: relative;
+  margin-bottom: 27px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #c1c1c1;
+  text-transform: uppercase;
+}
+
+.article .number {
+  position: relative;
+  top: -6px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.players .article:last-child .number {
+  color: #8765dd;
+}
+
+.article .number::after {
+  position: absolute;
+  bottom: -3px;
+  display: block;
+  height: 3px;
+  width: 1em;
+  background-color: #5e42b0;
+  content: '';
+  border-radius: 5%;
+}
+
+.article:last-child .number::after{
+  background-color: #ffffff;
+}
+
+.article .content {
+  font-size: 15px;
+}
+
+.article:last-child .content {
+  color: #ffffff;
+}
+
+.add_information .section_title {
+  display: none;
+}
+
+.add_information .article,
+.add_information .article:nth-child(odd),
+.add_information .article:last-child {
+  padding-top: 351px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.add_information .be_active {
+  background-image: url(../img/be-active_640.jpg);
+}
+
+.add_information .find_contact {
+  background-image: url(../img/find-contact_640.jpg);
+}
+
+.add_information .work_it {
+  background-image: url(../img/work-it_640.jpg);
+}
+
+.add_information .inner {
+  padding-top: 33px;
+  padding-bottom: 77px;
+  background-color: #ffffff;
+}
+
+.add_information .article .number {
+  position: absolute;
+  display: block;
+  margin-top: -91px;
+  padding: 27px;
+  color: #ffffff;
+  background-color: #5e42b0;
+}
+.add_information .article .number::after {
+  top: 47px;
+  background-color: #8f7bc8;
+}
+
+.add_information .article:last-child .content {
+  color: inherit;
+}
+
+.footer {
+  background-image: url(../img/game_767.jpg);
+}
+
+.footer > .container {
+  padding-top: 97px;
+  padding-bottom: 10px;
+}
+
+.footer_title {
+  margin-top: 48px;
+  margin-bottom: 76px;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer_subtitle {
+  display: block;
+  font-size: 14px;
+  color: #9b8ec1;
+  text-transform: none;
+}
+
+.footer .buttons {
+  margin-bottom: 72px;
+}
+
+.button.logotype {
+  padding-top: 14px;
+  padding-right: 8px;
+  padding-bottom: 14px;
+  padding-left: 8px;
+  width: 72px;
+  height: 77px;
+  box-sizing: border-box;
+  background: #50379a;
+  background: linear-gradient(180deg, #7656d6 0%, #50379a 100%);
+  border-radius: 13px;
+}
+
+.button.logotype .logotype_image {
+  width: 56px;
+  height: auto;
 }
