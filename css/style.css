@@ -27,6 +27,7 @@ body {
   padding: 0;
   font-family: OpenSans, Verdana, Geneva, Arial, Tahoma, Helvetica, sans-serif;
   font-size: 93.75%; /* 15px; 10px = 62.5%*/
+  line-height: 1;
   color: #000000;
   background-color: #ffffff;
 }
@@ -251,6 +252,10 @@ a:focus, a:active, a:hover, a:visited {
   background-size: 100% auto;
 }
 
+.add_information .picture {
+  display: none;
+}
+
 .add_information .be_active {
   background-image: url(../img/be-active_640.jpg);
 }
@@ -337,6 +342,52 @@ a:focus, a:active, a:hover, a:visited {
     display: flex;
     justify-content: space-around;
   }
+  .button, .button:hover, .button:active, .button:focus {
+    margin-bottom: 0;
+  }
+  
+  .main > .container {
+    padding-top: 0;
+  }
+
+  .section {
+    position: relative;
+  }  
+/*
+  .athlets,
+  .players {    
+    overflow-x: hidden;
+  }  */
+
+  .athlets::after,
+  .players::after {
+    position: absolute;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: '';
+    z-index: 5;
+  }
+  
+  .section_title {
+    font-size: 80px;
+  }
+    
+  .article .number {
+    top: -10px;
+    font-size: 18px;
+  }
+  
+  .article .number::after {
+    bottom: -5px;
+    height: 5px;
+    width: 1.1em;
+    border-radius: 2px;
+  }
+  
+  .add_information .article .number::after {
+    top: 80px;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) { 
@@ -381,7 +432,6 @@ a:focus, a:active, a:hover, a:visited {
   }
 
   .button, .button:hover, .button:active, .button:focus {
-    margin-bottom: 0;
     font-size: 14px;
   }
   
@@ -393,14 +443,8 @@ a:focus, a:active, a:hover, a:visited {
     background-position: 40px 50%;
     background-size: auto 42px;
     border-radius: 31px;
-    box-sizing: border-box;
   }
   
-
-  .section {
-    position: relative;
-  }
-
   .athlets, 
   .players {
     padding-top: 85px;
@@ -415,16 +459,6 @@ a:focus, a:active, a:hover, a:visited {
   .players .section_title,
   .players .article {
     padding-right: 346px;
-  }
-
-  .athlets::after,
-  .players::after {
-    position: absolute;
-    display: block;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    content: '';
-    z-index: 1;
   }
 
   .athlets::after {
@@ -445,7 +479,6 @@ a:focus, a:active, a:hover, a:visited {
 
   .section_title {
     margin-bottom: 19px;
-    font-size: 80px;
   }
 
   .article {
@@ -503,10 +536,6 @@ a:focus, a:active, a:hover, a:visited {
     padding: 47px;
     font-size: 24px;
   }
-
-  .add_information .article .number::after {
-    top: 80px;
-  }
     
   .footer {
     background-image: url(../img/game_1280.jpg);
@@ -549,10 +578,206 @@ a:focus, a:active, a:hover, a:visited {
   }
 }
 
-@media (min-width: 961px) and (max-width: 1920px) { /*surface_desktop.psd*/
+@media (min-width: 961px)  { 
+  .header {
+    background-image: url(../img/football_1920.jpg);
+  }
 
-}
+  .header > .container {
+    padding-top: 45px;
+    padding-bottom: 110px;
+  }
 
-@media (min-width: 1921px) { /*фоновые блоки будут растягиваться на всю ширину экрана, а их контент будет центрироваться.*/
+  .header > .container, 
+  .section_title, 
+  .article .inner,
+  .add_information .inner,
+  .footer > .container { 
+    max-width: 1557px; 
+    padding-right: 14px;
+    padding-left: 14px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
+  .logotype {
+    width: 191px;
+    height: 52px;
+  }
+  
+  .header_title {
+    margin-top: 295px;
+    margin-bottom: 222px;
+    font-size: 90px;
+    line-height: 1em;
+  }
+
+  .header_subtitle {
+    display: block;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .button, .button:hover, .button:active, .button:focus {
+    font-size: 14px;
+  }
+  
+  .button.download {
+    width: 310px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 105px;
+    margin-left: 50px;
+    background-position: 38px 50%;
+    background-size: auto 48px;
+    border-radius: 33px;
+  }
+   
+  .athlets, 
+  .players {
+    padding-top: 115px;
+    background-image: none;
+  }
+
+  .athlets .section_title,
+  .athlets .title,
+  .athlets .content {
+    padding-left: 53%;
+  }
+
+  .players .section_title,
+  .players .title,
+  .players .content {
+    padding-right: 48.49%;
+  }
+
+  .athlets::after {
+    top: 27px;
+    right: 49.84%;
+    width: 566px;
+    height: 908px;
+    background-image: url(../img/footballer_566.png);
+  }
+
+  .players::after {
+    top: 24px;
+    left: 40.01%;
+    width: 991px;
+    height: 815px;
+    background-image: url(../img/basketballer_991.png);
+  }
+
+  .section_title {
+    margin-bottom: 48px;
+  }
+
+  .article {
+    padding-top: 60px;
+    padding-bottom: 55px;
+  }
+
+  .article .title {
+    margin-bottom: 29px;
+    font-size: 36px;
+  }
+    
+  .article .content {
+    font-size: 20px;
+  }
+
+  .add_information .article,
+  .add_information .article:nth-child(odd),
+  .add_information .article:last-child {
+    display: flex;
+    padding-top: 0;
+    background-color: none;
+  }
+  
+  .add_information .be_active,
+  .add_information .find_contact,
+  .add_information .work_it {
+    background-image: none;
+  }
+
+  .add_information .picture {
+    display: block;
+  }
+
+  .find_contact .picture {
+    order: 1;
+  }
+
+  .add_information .inner {
+    padding-top: 260px;
+    padding-right: 126px;
+    padding-bottom: 0;
+    padding-left: 126px;
+    background-color: #ffffff;
+  }
+  
+  .add_information .article .number {
+    position: absolute;
+    left: -185px;
+    padding: 47px;
+    font-size: 24px;
+  }
+  
+  .add_information .find_contact .number {
+    left: auto;
+    right: -185px;
+  }
+    
+  .footer {
+    background-image: url(../img/game_1920.jpg);
+  }
+  
+  .footer > .container {
+    padding-top: 226px;
+    padding-bottom: 46px;
+  }
+
+  .footer_logo {
+    display: flex;
+    margin-bottom: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer_title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 80px;
+  }
+  
+  .footer_subtitle {
+    font-size: 36px;
+    color: #9b8ec1;
+    text-transform: none;
+    text-align: left;
+  }
+  
+  .footer .buttons {
+    margin-bottom: 258px;
+  }
+  
+  .button.logotype {
+    padding-top: 25px;
+    padding-right: 14px;
+    padding-bottom: 25px;
+    padding-left: 14px;
+    margin-right: 35px;
+    margin-left: 0;
+    width: 128px;
+    height: 137px;
+    border-radius: 26px;
+  }
+  
+  .button.logotype .logotype_image {
+    width: 102px;
+  }
 }
