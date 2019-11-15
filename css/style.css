@@ -130,62 +130,86 @@ a:focus, a:active, a:hover, a:visited {
 }
 
 .button.download {
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-left: 112px;
-  background-position: 82px 50%;
-  background-repeat: no-repeat;
-  background-size: auto 24px;
   border-radius: 15px;
 }
 
-.button.apple {
+.button.download .text {
+  display: block;
+  width: calc( 30px + 10em);
+  padding-top: 9px;
+  padding-left: 30px;
+  padding-bottom: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+}
+
+.button.apple .text {
   background-image: url(../img/apple_logo_black.svg);
 }
 
-.button.google {
+.button.google .text {
   background-image: url(../img/google-play.svg);
 }
 
+
 .button .name {
   display: block;
-}
-
-.main > .container {
-  padding-top: 26px;
-}
-
-.section {
-  background-position: 50% 81px;
-  background-repeat: no-repeat;
-}
-
-.athlets {
-  background-image: url(../img/footballer_192.png);
-}
-
-.players {
-  background-image: url(../img/basketballer_302.png);
+  font-weight: bold;
 }
 
 .section_title {
-  margin-bottom: 268px;
+  margin-top: 25px;
+  margin-bottom: 28px;
   font-size: 50px;
   font-weight: bold;
   color: #e7e7e7;
   text-transform: uppercase;
 }
 
+.athlets .section_title::after,
+.players .section_title::after {
+  display: block;
+  margin-top: 19px;
+  margin-right: auto;
+  margin-left: auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.athlets .section_title::after {
+  width: 192px;
+  height: 281px;
+  background-image: url(../img/footballer_192.png);
+}
+
+.players .section_title::after {
+  width: 302px;
+  height: 248px;
+  background-image: url(../img/basketballer_302.png);
+}
+
 .article {
-  padding-top: 60px;
   padding-bottom: 55px;
 }
 
-.article:nth-child(odd) {
+.athlets .article:nth-child(odd),
+.athlets .article:last-child,
+.players .article:nth-child(odd),
+.players .article:last-child
+ {
+  padding-top: 60px;
+}
+
+.athlets .article:nth-child(odd),
+.players .article:nth-child(odd) {
   background-color: #f5f4f9;
 }
 
-.article:last-child {
+.athlets .article:last-child {
   background-color: #5e42b0;
 }
 
@@ -221,7 +245,7 @@ a:focus, a:active, a:hover, a:visited {
   width: 1em;
   background-color: #5e42b0;
   content: '';
-  border-radius: 5%;
+  border-radius: 1px;
 }
 
 .article:last-child .number::after{
@@ -243,35 +267,26 @@ a:focus, a:active, a:hover, a:visited {
 .add_information .article,
 .add_information .article:nth-child(odd),
 .add_information .article:last-child {
-  padding-top: 351px;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 
-.add_information .picture {
-  display: none;
-}
-
-.add_information .be_active {
-  background-image: url(../img/be-active_640.jpg);
-}
-
-.add_information .find_contact {
-  background-image: url(../img/find-contact_640.jpg);
-}
-
-.add_information .work_it {
-  background-image: url(../img/work-it_640.jpg);
+.picture,
+.picture img {
+  width: 100vw;
+  max-width: 100%;
 }
 
 .add_information .inner {
   padding-top: 33px;
   padding-bottom: 77px;
   background-color: #ffffff;
+}
+
+.add_information .inner,
+.add_information .picture {
+  width: 50%;
 }
 
 .add_information .article .number {
@@ -306,13 +321,14 @@ a:focus, a:active, a:hover, a:visited {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer_subtitle {
   display: block;
   font-size: 14px;
+  font-weight: normal;
   color: #9b8ec1;
-  text-transform: none;
 }
 
 .footer .buttons {
@@ -346,31 +362,18 @@ a:focus, a:active, a:hover, a:visited {
     margin-bottom: 0;
   }
   
-  .main > .container {
-    padding-top: 0;
-  }
-
   .section {
     position: relative;
   }  
-/*
-  .athlets,
-  .players {    
-    overflow-x: hidden;
-  }  */
-
-  .athlets::after,
-  .players::after {
-    position: absolute;
-    display: block;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    content: '';
-    z-index: 5;
-  }
   
   .section_title {
     font-size: 80px;
+  }
+
+  
+  .athlets .section_title::after,
+  .players .section_title::after {
+    margin: 0;
   }
     
   .article .number {
@@ -437,18 +440,20 @@ a:focus, a:active, a:hover, a:visited {
   
   .button.download {
     width: 44%;
+    border-radius: 31px;
+  }
+
+  .button.download .text {
+    width: calc(69px + 10em);
     padding-top: 26px;
     padding-bottom: 22px;
-    padding-left: 104px;
-    background-position: 40px 50%;
+    padding-left: 69px;
     background-size: auto 42px;
-    border-radius: 31px;
   }
   
   .athlets, 
   .players {
     padding-top: 85px;
-    background-image: none;
   }
 
   .athlets .section_title,
@@ -461,16 +466,26 @@ a:focus, a:active, a:hover, a:visited {
     padding-right: 346px;
   }
 
-  .athlets::after {
-    top: 85px;
+  .athlets .section_title,
+  .players .section_title {
+    position: relative;
+  }
+
+  .athlets .section_title::after,
+  .players .section_title::after {
+    position: absolute;
+  }
+
+  .athlets .section_title::after {
+    top: 9px;
     left: -157px;
     width: 497px;
     height: 699px;
     background-image: url(../img/footballer_497.png);
   }
 
-  .players::after {
-    top: 37px;
+  .players .section_title::after {
+    top: -49px;
     right: 0;
     width: 436px;
     height: 565px;
@@ -481,7 +496,8 @@ a:focus, a:active, a:hover, a:visited {
     margin-bottom: 19px;
   }
 
-  .article {
+  .athlets .article,
+  .players .article {
     padding-top: 80px;
     padding-bottom: 36px;
   }
@@ -505,24 +521,6 @@ a:focus, a:active, a:hover, a:visited {
   
   .article .content {
     font-size: 16px;
-  }
-
-  .add_information .article,
-  .add_information .article:nth-child(odd),
-  .add_information .article:last-child {
-    padding-top: 584px;
-  }
-  
-  .add_information .be_active {
-    background-image: url(../img/be-active_960.jpg);
-  }
-
-  .add_information .find_contact {
-    background-image: url(../img/find-contact_960.jpg);
-  }
-
-  .add_information .work_it {
-    background-image: url(../img/work-it_960.jpg);
   }
 
   .add_information .inner {
@@ -629,19 +627,28 @@ a:focus, a:active, a:hover, a:visited {
   
   .button.download {
     width: 310px;
-    padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 105px;
-    margin-left: 50px;
-    background-position: 38px 50%;
-    background-size: auto 48px;
     border-radius: 33px;
   }
-   
-  .athlets, 
+  
+  .button.download:first-child {
+    margin-right: 50px;
+  }
+  
+  .button.download .text {
+    width: calc(66px + 10em);
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 66px;
+    background-size: auto 48px;
+  }
+      
+  .athlets,
   .players {
     padding-top: 115px;
-    background-image: none;
+  }
+
+  .players {
+    overflow: hidden;
   }
 
   .athlets .section_title,
@@ -654,6 +661,20 @@ a:focus, a:active, a:hover, a:visited {
   .players .title,
   .players .content {
     padding-right: 48.49%;
+  }
+
+  .athlets .section_title::after,
+  .players .section_title::after {
+    content: none;
+  }
+
+  .athlets::after,
+  .players::after {
+    position: absolute;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: '';
   }
 
   .athlets::after {
@@ -690,22 +711,13 @@ a:focus, a:active, a:hover, a:visited {
     font-size: 20px;
   }
 
-  .add_information .article,
-  .add_information .article:nth-child(odd),
-  .add_information .article:last-child {
+  .add_information .article {
     display: flex;
     padding-top: 0;
-    background-color: none;
-  }
-  
-  .add_information .be_active,
-  .add_information .find_contact,
-  .add_information .work_it {
-    background-image: none;
   }
 
-  .add_information .picture {
-    display: block;
+  .picture {
+    margin-bottom: -2px;
   }
 
   .find_contact .picture {
