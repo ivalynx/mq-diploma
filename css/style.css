@@ -362,6 +362,10 @@ a:focus, a:active, a:hover, a:visited {
     margin-bottom: 0;
   }
   
+  .main {
+    overflow: hidden;
+  }
+  
   .section {
     position: relative;
   }  
@@ -645,10 +649,6 @@ a:focus, a:active, a:hover, a:visited {
   .athlets,
   .players {
     padding-top: 115px;
-  }
-
-  .players {
-    overflow: hidden;
   }
 
   .athlets .section_title,
