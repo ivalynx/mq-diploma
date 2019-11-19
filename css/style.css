@@ -143,19 +143,17 @@ a:focus, a:active, a:hover, a:visited {
   margin-right: auto;
   background-position: 0 50%;
   background-repeat: no-repeat;
-  background-size: auto 24px;
-}
-
-.ie .button.download .text {
-  background-position-x: -30px;
+  
 }
 
 .button.apple .text {
   background-image: url(../img/apple_logo_black.svg);
+  background-size: 21px 24px;
 }
 
 .button.google .text {
   background-image: url(../img/google-play.svg);
+  background-size: 22px 24px;
 }
 
 
@@ -452,7 +450,14 @@ a:focus, a:active, a:hover, a:visited {
     padding-top: 26px;
     padding-bottom: 22px;
     padding-left: 69px;
-    background-size: auto 42px;
+  }
+  
+  .button.download.apple .text {
+    background-size: 36px 42px;
+  }
+
+  .button.download.google .text {
+    background-size: 41px 45px;
   }
   
   .athlets, 
@@ -647,7 +652,15 @@ a:focus, a:active, a:hover, a:visited {
     padding-top: 26px;
     padding-bottom: 26px;
     padding-left: 66px;
-    background-size: auto 48px;
+    
+  }
+
+  .button.download.apple .text {
+    background-size: 42px 48px;
+  }
+
+  .button.download.google .text {
+    background-size: 40px 50px;
   }
       
   .athlets,
