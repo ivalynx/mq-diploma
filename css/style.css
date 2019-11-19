@@ -146,6 +146,10 @@ a:focus, a:active, a:hover, a:visited {
   background-size: auto 24px;
 }
 
+.ie .button.download .text {
+  background-position-x: -30px;
+}
+
 .button.apple .text {
   background-image: url(../img/apple_logo_black.svg);
 }
