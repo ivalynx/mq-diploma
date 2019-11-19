@@ -284,12 +284,11 @@ a:focus, a:active, a:hover, a:visited {
   background-color: #ffffff;
 }
 
-.add_information .inner,
-.add_information .picture {
-  width: 50%;
+.add_information .title_text {
+  opacity: 0.4;
 }
 
-.add_information .article .number {
+.add_information .number {
   position: absolute;
   display: block;
   margin-top: -91px;
@@ -297,7 +296,7 @@ a:focus, a:active, a:hover, a:visited {
   color: #ffffff;
   background-color: #5e42b0;
 }
-.add_information .article .number::after {
+.add_information .number::after {
   top: 47px;
   background-color: #8f7bc8;
 }
@@ -392,9 +391,6 @@ a:focus, a:active, a:hover, a:visited {
     border-radius: 2px;
   }
   
-  .add_information .article .number::after {
-    top: 80px;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) { 
@@ -533,10 +529,14 @@ a:focus, a:active, a:hover, a:visited {
     background-color: #ffffff;
   }
   
-  .add_information .article .number {
+  .add_information .number {
     margin-top: -170px;
     padding: 47px;
     font-size: 24px;
+  }
+  
+  .add_information .number::after {
+    top: 80px;
   }
     
   .footer {
@@ -710,6 +710,11 @@ a:focus, a:active, a:hover, a:visited {
   .article .content {
     font-size: 20px;
   }
+  
+.add_information .inner,
+.add_information .picture {
+  width: 50%;
+}
 
   .add_information .article {
     display: flex;
@@ -725,23 +730,46 @@ a:focus, a:active, a:hover, a:visited {
   }
 
   .add_information .inner {
-    padding-top: 260px;
-    padding-right: 126px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0;
+    padding-right: 14px;
     padding-bottom: 0;
     padding-left: 126px;
     background-color: #ffffff;
+  }  
+
+  .add_information .title {
+    padding-top: 36px;
+    padding-bottom: 12.85%;
+    margin-bottom: 0;
+    font-size: 80px;
   }
   
-  .add_information .article .number {
+  .add_information .number {
     position: absolute;
-    left: -185px;
-    padding: 47px;
+    top: 0;
+    left: calc(-198px - 0.5em);
+    margin-top: 0;
+    padding-top: 61px;
+    padding-right: 70px;
+    padding-bottom: 61px;
+    padding-left: 70px;
     font-size: 24px;
+  }
+
+  .add_information .number::after {
+    top: calc( 1em + 10px + 60px);
   }
   
   .add_information .find_contact .number {
     left: auto;
-    right: -185px;
+    right: calc(-198px - 0.5em);
+  }
+  
+  .add_information .find_contact .inner {    
+    padding-left: 14px;
+    padding-right: 126px;
   }
     
   .footer {
