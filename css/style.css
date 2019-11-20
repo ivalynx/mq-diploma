@@ -668,13 +668,13 @@ a:focus, a:active, a:hover, a:visited {
     padding-top: 115px;
   }
 
-  .athlets .section_title,
+  .athlets .section_title_text,
   .athlets .title,
   .athlets .content {
     padding-left: 53%;
   }
 
-  .players .section_title,
+  .players .section_title_text,
   .players .title,
   .players .content {
     padding-right: 48.49%;
@@ -747,13 +747,14 @@ a:focus, a:active, a:hover, a:visited {
   }
 
   .add_information .inner {
-    margin-top: auto;
-    margin-bottom: auto;
+    display: flex;
     padding-top: 0;
     padding-right: 14px;
     padding-bottom: 0;
     padding-left: 126px;
     background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
   }  
 
   .add_information .title {
